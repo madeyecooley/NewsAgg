@@ -13,7 +13,8 @@ BOT_NAME = 'spider_one'
 
 SPIDER_MODULES = ['spider_one.spiders']
 NEWSPIDER_MODULE = 'spider_one.spiders'
-
+DEPTH_LIMIT = 0
+DOWNLOAD_DELAY = 1
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'spider_one (+http://www.yourdomain.com)'

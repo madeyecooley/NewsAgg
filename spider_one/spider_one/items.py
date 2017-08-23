@@ -8,6 +8,11 @@
 import scrapy
 
 
-class NPRSpiderItem(scrapy.Item):
-    title = scrapy.Field()
-    url = scrapy.Field()
+class Article(scrapy.Item):
+    Title = scrapy.Field()
+    URL = scrapy.Field()
+    Author = scrapy.Field()
+    Summary = scrapy.Field()
+    Photo = scrapy.Field()
+    Credit_Caption = scrapy.Field()
+    Site = scrapy.Field()
