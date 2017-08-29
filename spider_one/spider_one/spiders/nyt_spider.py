@@ -1,15 +1,7 @@
 from scrapy.spiders import Rule, Spider
 from ..items import Article
+from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
-
-
-def print_item(item):
-    print "TITLES: %s" % item.get('Title')
-    print "URLS: %s" % item.get('URL')
-    print "SUMMARY: %s" % item.get('Summary')
-    print "IMG URL: %s" % item.get('Photo')
-    print "IMG CAPTION: %s" % item.get('Credit_Caption')
-    print "ARTICLE SITE: %s" % item.get('Site')
 
 
 class NPRSpider(Spider):
@@ -23,19 +15,26 @@ class NPRSpider(Spider):
 
     def parse(self, response):
         items = []
-        for div in response.xpath('//*[@id="main"]/div[2]/div/div[1]/div[2]/div['
-                                      '@class="columnGroup first"]'):
+        for div in response.xpath('//*[@class="aColumn"]/div[1]/div'):
             item = Article()
-            item["Title"] = div.xpath('div[@class="story"]/h3/a/text()').extract()[0]
-            # item["URL"] = article.xpath('div[@class="story"]/h3/a/@href').extract()[0]
-            # item["Summary"] = article.xpath('div/p[@class="summary"]/text()').extract()[0]
-            # item["Photo"] = article.xpath('div[@class="thumbnail"]/a/img/@src').extract()
-            # # item["Credit_Caption"] = article.xpath('div/div[@class="credit-caption"]/span/text('
-            # #                                        ')').extract()
+            item["Title"] = div.xpath('h3/a/text()').extract()[0]
+            item["URL"] = div.xpath('h3/a/@href').extract()[0]
+            item["Summary"] = div.xpath('p[@class="summary"]/text()').extract()[0]
+            item["Photo"] = div.xpath('div/a/img/@src').extract()
             item["Site"] = "NYT"
 
             items.append(item)
-            print_item(item)
-# //*[@id="main"]/div[2]/div/div[1]/div[2]/div[1]
-# //*[@id="main"]/div[2]/div/div[1]/div[2]/div[1]/div[1]/h3/a
-# //*[@id="main"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/h3/a
+            # print_item(item)
+
+#This section is for the smaller titles at the bottom of the site
+        # for div in response.xpath('//*[@class="aColumn"]/div[2]/ul/li'):
+        #     item = Article()
+        #     item["Title"] = div.xpath('h6/a/text()').extract()[0]
+        #     item["URL"] = div.xpath('h3/a/@href').extract()[0]
+        #     # item["Summary"] = div.xpath('p[@class="summary"]/text()').extract()[0]
+        #     # item["Photo"] = div.xpath('div/a/img/@src').extract()
+        #     item["Site"] = "NYT"
+        #
+        #     items.append(item)
+        #     print_item(item)
+
