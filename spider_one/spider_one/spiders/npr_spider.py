@@ -9,7 +9,7 @@ def print_item(item):
     print "SUMMARY: %s" % item.get('Summary')
     print "IMG URL: %s" % item.get('Photo')
     print "IMG CAPTION: %s" % item.get('Credit_Caption')
-    print "ARTICLE SITE: %s" % item.get('Credit_Caption')
+    print "ARTICLE SITE: %s" % item.get('Site')
 
 
 class NPRSpider(Spider):
@@ -32,7 +32,7 @@ class NPRSpider(Spider):
             item["Photo"] = article.xpath('div/div/a/img/@src').extract()
             item["Credit_Caption"] = article.xpath('div/div[@class="credit-caption"]/span/text('
                                                    ')').extract()
-            item["Site"] = "NPR"
+            item["Site"] = NPR
 
             items.append(item)
-            # print_item(item)
+            print_item(item)
