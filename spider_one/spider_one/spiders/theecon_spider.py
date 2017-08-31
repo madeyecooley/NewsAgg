@@ -4,8 +4,8 @@ from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
 
 
-class NPRSpider(Spider):
-    name = 'theecon_spider'
+class ECONSpider(Spider):
+    name = 'econ_spider'
     allowed_domains = ['www.economist.com']
     start_urls = ['https://www.economist.com/latest-updates']
 
@@ -16,10 +16,11 @@ class NPRSpider(Spider):
     def parse(self, response):
         items = []
 
-        for article in response.xpath('//*[class="teaser-list"]/article'):
+        for article in response.xpath('//*[@class="main-content__teaser-list '
+                                      'main-content__teaser-list--blog-page '
+                                      'main-content__main-column"]/div[1]/article'):
             item = Article()
-            item["Title"] = article.xpath('a/div[@class="teaser__group-text"]/h3/span['
-                                          '@class="flytitle-and-title__title"]/text()').extract()[0]
+            item["Title"] = article.xpath('a/div/h3/span/text()').extract()[0]
             # item["URL"] = article.xpath('div/h2[@class="title"]/a/@href').extract()[0]
             # item["Summary"] = article.xpath('div/p[@class="teaser"]/a/text()').extract()[0]
             # item["Photo"] = article.xpath('div/div/a/img/@src').extract()

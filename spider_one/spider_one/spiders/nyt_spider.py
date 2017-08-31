@@ -4,7 +4,7 @@ from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
 
 
-class NPRSpider(Spider):
+class NYTSpider(Spider):
     name = 'nyt_spider'
     allowed_domains = ['www.nytimes.com']
     start_urls = ['http://www.nytimes.com/pages/todayspaper/index.html?action=Click&module=HPMiniNav&region=TopBar&WT.nav=page&contentCollection=TodaysPaper&pgtype=Homepage']
@@ -24,7 +24,7 @@ class NPRSpider(Spider):
             item["Site"] = "NYT"
 
             items.append(item)
-            # print_item(item)
+            print_item(item)
 
 #This section is for the smaller titles at the bottom of the site
         # for div in response.xpath('//*[@class="aColumn"]/div[2]/ul/li'):
