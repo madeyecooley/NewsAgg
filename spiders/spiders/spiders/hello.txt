@@ -1,0 +1,991 @@
+
+   try {var _sf_startpt=(new Date()).getTime();} catch(e){}
+
+American Woman Faces Charges In Zimbabwe Over Tweets About Mugabe : The Two-Way : NPR
+   window.NPR = window.NPR || {};
+NPR.ServerConstants = {"cbHost":"npr.org","webHost":"https:\/\/www.npr.org","embedHost":"https:\/\/www.npr.org","webHostSecure":"https:\/\/secure.npr.org","apiHost":"https:\/\/api.npr.org","staticAssetHost":"https:\/\/s.npr.org","serverMediaCache":"https:\/\/media.npr.org","googleAnalyticsAccount":"UA-5828686-4","gtmKey":"GTM-K9RKM5","nielsenSFCode":"dcr","nielsenAPN":"NPR-dcr"};
+NPR.serverVars = {"storyId":"563285405","facebookAppId":"138837436154588","webpackPublicPath":"https:\/\/s.npr.org\/templates\/javascript\/dist\/bundles\/","persistenceVersion":"99c873f7637d9ff25032187a4f3b70ce","isBuildOut":true,"topicIds":["P1126","1001","1002","1004"],"primaryTopic":"Africa","topics":["Africa","News","Home Page Top Stories","World"],"blog":"The Two-Way","theme":"103943429","aggIds":["1001","1002","1004","1126","103943429","125950112","127602464","131906425","201492995","518336907"],"tagIds":["Amnesty International","Zimbabwe","president robert mugabe"],"byline":["Camila Domonoske"],"pubDate":"2017111012","pageTypeId":"1","title":"American Woman Faces Charges In Zimbabwe Over Tweets About Mugabe","rocketfuelCode":20501671};
+
+
+   
+
+   !function(e){function a(c){if(f[c])return f[c].exports;var d=f[c]={exports:{},id:c,loaded:!1};return e[c].call(d.exports,d,d.exports,a),d.loaded=!0,d.exports}var c=window.webpackJsonp;window.webpackJsonp=function(b,t){for(var n,r,o=0,i=[];o<b.length;o++)r=b[o],d[r]&&i.push.apply(i,d[r]),d[r]=0;for(n in t){var s=t[n];switch(typeof s){case"object":e[n]=function(a){var c=a.slice(1),f=a[0];return function(a,d,b){e[f].apply(this,[a,d,b].concat(c))}}(s);break;case"function":e[n]=s;break;default:e[n]=e[s]}}for(c&&c(b,t);i.length;)i.shift().call(null,a);if(t[0])return f[0]=0,a(0)};var f={},d={22:0};a.e=function(e,c){if(0===d[e])return c.call(null,a);if(void 0!==d[e])d[e].push(c);else{d[e]=[c];var f=document.getElementsByTagName("head")[0],b=document.createElement("script");b.type="text/javascript",b.charset="utf-8",b.async=!0,b.src=a.p+""+e+"."+{0:"90c2e65d28c38794c73f",1:"af853d1ff1657dae11ea",2:"32d4d5d38e7d25350bbe",3:"2a8b7994eb7aeb9d9220",4:"c2b892fe36738255aa60",5:"4cf63edd003d0ec74e42",6:"1a8c5f4dda8f643ae302",7:"b3947f1677f2f15523ad",8:"76c6a07b99fe85009bc9",9:"b705f73f6ae1fa4e5b18",10:"cd7c02118587552773f9",11:"561f908758828145c915",12:"d6129ff0b5e01f885162",13:"eadeac5a92e96079bf3f",14:"2eeb851bc302156a832c",15:"7985488400fbd8c60628",16:"2f4e55281cd3852151fe",17:"cdee0ade6344bcf38e2d",18:"2f05d48ef5baca9cb0f8",19:"add25beef7a5e2db3307",20:"34d620cff049006c8601",21:"3d3e0b6e7e534c0e5a65",23:"63adf8f8e31285a5cd89",24:"5ead5a6075693672393e",25:"9b3c96aa996b92c00a76",26:"2b6349f7f21b567ee4c9",27:"b0b2bf73fe02bbf4ba06",28:"ac6b11ef6f14c3ac349b",29:"dc07d865215f74005c99",30:"3d9bc2ec0485138c2c19",31:"9b2f78cfcc80f28430b6",32:"3af4a0e2ffb07781c58a",33:"2909506e884bd459fe44",34:"adfa15042a013df4e066",35:"dbb0156f462f698783d5",36:"590cea6865c2745b0b38",37:"cfa489b4c0f5e2848d39",38:"32858a99709cdeb3d177",39:"385d79ccc6e80888c1fe",40:"ee113acf987fc09ba6a9",41:"a064bc6d12045e5cc870",42:"56bbaedb6c516794fbc8",43:"b12c3b57fd55367657b7",44:"f74672628f680ab9359f",45:"04a3442ab7de93f00515",46:"8ca78f4b7bf0526c2510",47:"4081d9aedea469735718",48:"3c9bb65c42af54dcbf65",49:"40db82024123641e440f",50:"db3f8e54536d0fae9775",51:"06a54639699d8ffd7331",52:"98693e40fa53d0689d14",53:"c00f879deaf20ef7f080",54:"5890ddf83291fd6ac14c",55:"d453ac6e459a3d58259e",56:"0fb306517d49661d35a1",57:"198ac362be972c52a0c6",58:"1332af869c41af75175f",59:"7078be64fa186786eabd",60:"d2fdc76b8dabbb6ba350",61:"f07586341575e4200fc0",62:"4a9a2f22580a6ee5bf13",63:"0753bab4f1ace10b8cdf",64:"a8e6527abab00f9c73ed",65:"bde4887d22138fd1d4ec",66:"c78ae876c04aa183e02a",67:"57243d0e4cdc28553f08",68:"befee50a0dba7861e676",69:"6928c61dca567f2574d4",70:"602570926f03d70b8276",71:"51efbf9be397e39ca4f6",72:"1cfc9cab7d796f6455ab",73:"c906e258b3d44228b59c",74:"a1158f387c8aaa92d652"}[e]+".chunk.js",f.appendChild(b)}},a.m=e,a.c=f,a.p="/templates/javascript/dist/bundles/"}(function(e){for(var a in e)if(Object.prototype.hasOwnProperty.call(e,a))switch(typeof e[a]){case"function":break;case"object":e[a]=function(a){var c=a.slice(1),f=e[a[0]];return function(e,a,d){f.apply(this,[e,a,d].concat(c))}}(e[a]);break;default:e[a]=e[e[a]]}return e}([]));
+
+
+   document.domain="npr.org";
+
+
+      Accessibility links
+   
+            Skip to main content
+      Keyboard shortcuts for audio player
+   
+
+
+    
+        View Navigation
+
+        
+        
+            
+            NPR
+        
+
+        
+        
+            
+            NPR
+        
+
+        
+        
+            
+            NPR Music
+        
+
+        
+        
+            
+            NPR Books
+        
+
+        
+        
+            
+            NPR About
+        
+
+        
+        
+            
+            
+            NPRPodcast Directory
+        
+
+        
+            
+                Search
+                
+                Toggle search
+            
+        
+    
+    
+
+    
+        
+            
+
+            
+                
+                    NPR Home
+                    
+                    
+                
+
+                
+                    News
+                    Arts & Life
+                    Music
+                    Topics
+                    
+                        
+                            Programs & Podcasts
+                        
+                    
+                
+                
+
+                
+                    
+                        NPR Music
+                    
+                    Genres
+                    
+                        New Music
+                    
+                    
+                        Concerts & Videos
+                    
+                    
+                        Articles & Lists
+                    
+                    
+                        Tiny Desk
+                    
+                
+                
+
+                
+                    
+                        NPR Books
+                    
+                    
+                        Author Interviews
+                    
+                    
+                        Find Books
+                    
+                    
+                        Reviews
+                    
+                
+                
+
+                
+                    
+                        About NPR
+                    
+                    
+                        Overview
+                    
+                    
+                        Connect
+                    
+                    
+                        Support
+                    
+                    
+                        Press
+                    
+                    
+                        Careers
+                    
+                
+                
+
+                
+                    
+                        Podcast Directory
+                    
+
+                    
+                        Categories
+                    
+                    
+                        
+                        
+                    
+                
+                
+
+                
+                    
+
+                    
+                        NPR Shop
+                    
+                    
+                
+                
+            
+            
+
+            
+            
+                Back
+                
+                    News
+                    
+                        National
+                        World
+                        Politics
+                        Business
+                        Technology
+                        Science
+                        Health
+                        Race & Culture
+                        Education
+                    
+                
+                
+                    Arts & Life
+                    
+                        Books
+                        Movies
+                        Pop Culture
+                        Food
+                        Art & Design
+                        Performing Arts
+                        Photography
+                    
+                
+                
+                    Music
+                    
+
+                        First Listen
+                        Songs We Love
+                        Music Articles
+                        Tiny Desk
+                        Videos
+                    
+                
+
+                
+                    More
+                    
+                        Our Blogs
+                        Corrections
+                        All About NPR
+                    
+                
+            
+
+
+            
+                Back
+
+                
+                    News & Conversations
+                    
+                        Morning Edition
+                        All Things Considered
+                        Fresh Air
+                        Here & Now
+                        1A
+                        Code Switch
+                        Embedded
+                        It's Been a Minute with Sam Sanders
+                        Latino USA
+                        NPR Politics Podcast
+                        On Point
+                        Rough Translation
+                        Up First
+                        Weekend Edition Saturday
+                        Weekend Edition Sunday
+                        What's Good with Stretch & Bobbito
+                        Youth Radio
+                    
+                
+
+                
+                    Storytelling & Humor
+                    
+                        Ask Me Another
+                        The Best Of Car Talk
+                        The Big Listen
+                        Bullseye
+                        Hidden Brain
+                        How I Built This
+                        Invisibilia
+                        Live from the Poundstone Institute
+                        Only A Game
+                        Planet Money
+                        Pop Culture Happy Hour
+                        Radio Ambulante
+                        StoryCorps
+                        TED Radio Hour
+                        Wait Wait...Don't Tell Me!
+                        Wow in the World
+                    
+                
+
+                
+                    Music
+                    
+                        First Listen
+                        All Songs Considered
+                        Songs We Love
+                        Tiny Desk
+                        Alt.Latino
+                        From The Top
+                        Jazz Night In America
+                        Metropolis
+                        Mountain Stage
+                        Piano Jazz
+                        The Thistle & Shamrock
+                        World Cafe
+                    
+                
+
+                
+                    More
+                    
+                        All Programs
+                        Podcast Directory
+                        
+                        NPR Podcasts
+                    
+                
+            
+            
+            
+
+            
+            
+                Back
+
+                
+                    Rock
+                    Pop
+                    Jazz
+                    Classical
+                    Hip-Hop
+                    R&B/Soul
+                    Folk
+                    Latin
+                    World
+                    Electronic/Dance
+                
+            
+
+            
+                Back
+
+                
+                    First Listen
+                    Songs We Love
+                    All Songs Considered
+                    Reviews
+                    Music Videos
+                
+            
+
+            
+                Back
+
+                
+                    Tiny Desk
+                    Live Concerts
+                    Field Recordings
+                    Studio Sessions
+                    Music Documentaries
+                    Music Videos
+                    Festival Recordings
+                
+            
+
+            
+                Back
+
+                
+                    Articles
+                    Interviews
+                    Quizzes
+                    Music Lists
+                    Best Music of the Year
+                
+            
+            
+
+            
+            
+                Back
+
+                
+                    
+                        Art & Design
+                        Arts & Entertainment
+                        Biography & Memoir
+                        Business & Economy
+                        Children's Books
+                        Comedy
+                        Comics & Graphic Novels
+                        Digital Culture
+                    
+                
+
+                
+                    
+                        Faith & Spirituality
+                        Food & Wine
+                        History & Society
+                        Historical Fiction
+                        Horror & Supernatural
+                        Literary Fiction
+                        Mystery & Thrillers
+                        Parenting & Families
+                    
+                
+
+                
+                    
+                        Poetry
+                        Politics & Public Affairs
+                        Romance
+                        Science Fiction & Fantasy
+                        Science & Health
+                        Sports
+                        Travel
+                        Young Adult
+                    
+                
+
+                
+                    
+                        Nonfiction
+                        Fiction
+                    
+                
+            
+
+            
+                Back
+
+                
+                    Book Reviews
+                    This Week's Must Read
+                    My Guilty Pleasure
+                    Three Books...
+                    PG-13: Risky Reads
+                    You Must Read This
+                    Summer Books
+                    Best Books of the Year
+                
+            
+            
+
+            
+            
+                Back
+
+                
+                    Overview
+                    Overview and History
+                    Mission and Vision
+                    Stations and Public Media
+                    NPR Finances
+                    People
+                    Ethics
+                    Awards
+                
+            
+
+            
+                Back
+
+                
+                    Visit NPR
+                    NPR Presents
+                    Studio 1 Events
+                    Generation Listen
+                    Book a Speaker
+                    Request Permissions
+                    Ways to Listen
+                    NPR Extra Blog
+                    Email Newsletters
+                    Shop NPR
+                    Get Help
+                    Contact Us
+                
+            
+
+            
+                Back
+
+                
+                    Support Public Radio
+                    Corporate Sponsorship
+                    Volunteer
+                
+            
+
+            
+                Back
+
+                
+                    Releases and Statements
+                    Photos and Logos
+                    Fact Sheet (PDF)
+                    Media Relations Contacts
+                
+            
+
+            
+                Back
+
+                
+                    Careers at NPR
+                    Search Jobs
+                    Culture
+                    Applying
+                    Interns
+                    Fellows
+                    Digital
+                
+            
+            
+
+            
+            
+                Back
+
+                
+                    
+                        Arts
+                        Business
+                        Comedy
+                        Education
+                        Games & Hobbies
+                        Government & Organizations
+                        Health
+                        Kids & Family
+                    
+                
+
+                
+                    
+                        Music
+                        
+                        News & Politics
+                        Religion & Spirituality
+                        Science & Medicine
+                        Society & Culture
+                        Sports & Recreation
+                        Technology
+                        TV & Film
+                    
+                
+            
+            
+            
+
+            
+
+            
+            
+
+        
+        
+    
+    
+
+    
+    
+        
+            
+            NPR Shop
+            
+        
+    
+
+    
+
+
+
+      American Woman Faces Charges In Zimbabwe Over Tweets About Mugabe : The Two-Way   Martha O'Donovan is accused of tweeting that Robert Mugabe, the 93-year-old longtime president, is "selfish and sick." O'Donovan, who denies the charge, has been released on bail.
+
+
+      
+    
+        
+            
+        
+
+        
+
+        
+          American Woman Faces Charges In Zimbabwe Over Tweets About Mugabe
+          
+        
+    
+   
+      
+      The Two-Way
+   Breaking News From NPR
+
+
+
+
+
+
+
+
+      
+            
+                  
+  
+    America
+    International
+    Economy
+    Must Reads
+    Contact Us
+  
+
+
+
+
+
+  Follow
+  Facebook
+
+      
+      
+
+   
+
+
+
+    
+        International
+    
+
+ 
+      American Woman Faces Charges In Zimbabwe Over Tweets About Mugabe
+   
+   
+   
+   
+
+
+
+
+      
+            
+                  Facebook
+         Twitter
+         Email
+      
+   
+   
+
+
+
+
+
+      
+            
+    
+            November 10, 201712:29 PM ET
+    
+
+   
+   
+
+   
+            
+                  
+                        
+                              
+    
+      
+        
+      
+    
+
+  
+    
+      Camila Domonoske
+    
+  
+
+    
+      Twitter
+    
+
+            
+         
+         
+
+      
+   
+   
+
+
+
+
+
+      
+            
+    
+        
+            Enlarge this image
+        
+
+
+    
+        
+            
+                Martha O'Donovan, who was arrested over alleged subversive tweets about Zimbabwean President Robert Mugabe on Twitter, arrives at Harare Magistrate's Court in Harare, Zimbabwe, on Nov. 4.
+                
+                
+                    
+                    Jekesai Njikizana/AFP/Getty Images
+                    
+                
+                hide caption
+            
+        
+
+
+            toggle caption
+    
+
+    
+        
+        Jekesai Njikizana/AFP/Getty Images
+        
+    
+
+
+    
+        
+    
+
+
+    
+        Martha O'Donovan, who was arrested over alleged subversive tweets about Zimbabwean President Robert Mugabe on Twitter, arrives at Harare Magistrate's Court in Harare, Zimbabwe, on Nov. 4.
+        
+            
+            Jekesai Njikizana/AFP/Getty Images
+            
+        
+    
+
+   
+   Martha O'Donovan, a 25-year-old American, is facing charges in Zimbabwe over allegations that she tweeted that the country's longtime, nonagenarian president is "selfish and sick."   O'Donovan, a New Jersey native who works for a satirical news organization, was released on $1,000 bail Friday after a judge found that there was a "patent absence of facts" in the government's case against her, Reuters reports.   She was arrested last Friday and had been held in a maximum-security prison until her release.   
+            
+                           
+                        Parallels 
+             Nearing 93, Robert Mugabe Shows No Sign Of Stepping Down 
+         
+         
+
+      
+      
+
+   
+   
+
+   O'Donovan is due back in court on Wednesday, according to The Associated Press. She describes the charges against her as "baseless and malicious," the wire service says.   Peter Granitz, reporting for NPR from Pretoria, South Africa, has more on the case:      "O'Donovan was charged with attempting to overthrow the government of President Robert Mugabe. Mugabe, who is 93 years old, has ruled Zimbabwe since 1980. She was originally accused of insulting the president, but the new charges are much more severe. ...   "During a visit to South Africa last month, Mugabe said the country wanted to crack down on social media because it was spreading lies about his government and threatening the country's already collapsed economy.   "He's promised to run for re-election."      The tweet O'Donovan allegedly sent included a pair of images suggesting Mugabe was wearing a catheter during a public appearance. If convicted of subversion, she could face up to 20 years behind bars.   Amnesty International has called for the "absurd" charges against O'Donovan to be dropped immediately. "We fear she will not be the last to be swept up in the clampdown on social media platforms. We are calling on the Zimbabwean authorities to stop punishing people simply for exercising their freedom of expression. Social media users must not end up in jail simply for sharing their opinions."   
+    
+
+    
+
+   
+    
+
+    
+
+
+
+ 
+      
+            president robert mugabe
+      Amnesty International
+      Zimbabwe
+   
+
+
+
+
+      
+            Facebook
+      Twitter
+      Email
+   
+
+
+
+
+   
+
+
+
+   
+
+
+
+
+
+      
+      The Two-Way
+   Breaking News From NPR
+
+
+
+
+
+
+
+
+      
+      The Two-Way
+   Breaking News From NPR
+
+
+
+
+
+
+
+
+      
+            About
+      
+                  
+                        
+                              The Two-Way is the place to come for breaking news, analysis and for stories that are just too interesting – or too entertaining – to pass up. Get in touch with your questions, comments and leads.
+            
+            
+
+         
+         
+
+      
+   
+   
+
+   
+    Subscribe
+
+    
+        
+            Follow Bill
+            Follow Camila
+            Follow Colin
+            Follow Merrit
+            Facebook
+            RSS
+        
+    
+
+
+
+
+    NPR Twitter
+
+    
+        
+            
+           Follow @NPR
+        
+    
+
+
+
+
+
+   
+            
+    
+
+    
+    NPR thanks our sponsorsBecome an NPR sponsor
+
+
+   
+   
+
+
+
+
+
+    
+
+    
+
+
+      
+    
+        
+            Homepage
+        
+        
+            News
+            
+                National
+                World
+                Politics
+                Business
+                Technology
+                Science
+                Health
+                Race & Culture
+                Education
+            
+        
+        
+            Arts & Life
+            
+                Books
+                Movies
+                Pop Culture
+                Food
+                Art & Design
+                Performing Arts
+                Photography
+            
+        
+        
+            Music
+            
+                First Listen
+                Songs We Love
+                Music Articles
+                Tiny Desk
+                Videos
+            
+        
+        
+            Programs
+        
+        
+            About
+            
+                NPR Overview
+                NPR Finances
+                People at NPR
+                Support NPR
+                Visit NPR
+                Press Room
+                NPR Extra Blog
+                Careers at NPR
+                Corrections
+                NPR Ombudsman
+                Permissions
+            
+        
+    
+
+
+
+    
+    
+        Help
+        Contact
+        Terms of Use
+        Privacy
+        Sponsorship Choices
+        Text Only
+    
+
+
+
+   (function () {
+    var loadPageJs = function () { webpackJsonp([71,22],{0:function(n,t,c){n.exports=c(1274)},1274:function(n,t,c){"use strict";c.p=NPR.serverVars.webpackPublicPath,function(){var n=2,t=function(){--n<1&&function(n){c(22),c(1340),c(139),c(369),c(110),c(261),c(162),c(1345),c(161),c(1344),c(1343),c(585),c(166)}(c)}.bind(this);c.e(0,t),c.e(2,t)}.call(this)}}); };
+    if (document.readyState === 'complete') {
+        loadPageJs();
+    } else {
+        window.addEventListener('load', function load() {
+            window.removeEventListener('load', load, false);
+            loadPageJs();
+        });
+    }
+})();
+
+<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1621557368158968&ev=PageView&noscript=1" />
+    var _sf_async_config = _sf_async_config || {};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = '18888';
+    _sf_async_config.domain = NPR.ServerConstants.cbHost;
+    _sf_async_config.useCanonical = true;
+
+    /** CONFIGURATION END **/
+    (function() {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', 'https://static.chartbeat.com/js/chartbeat.js');
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function() {
+            oldonload();
+            loadChartbeat();
+        };
+    })();

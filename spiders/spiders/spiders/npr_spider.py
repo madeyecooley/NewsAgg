@@ -1,6 +1,7 @@
 from scrapy.spiders import Rule, Spider
 from ..items import Article
 from .misc_functions import print_item
+from .get_article import get_article
 from scrapy.linkextractors import LinkExtractor
 
 
@@ -27,4 +28,7 @@ class NPRSpider(Spider):
             item["Site"] = "NPR"
 
             items.append(item)
-            print_item(item)
+            
+            get_article(item["URL"])
+		    
+            #print_item(item)
