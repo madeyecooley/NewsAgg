@@ -15,7 +15,7 @@ def get_article(url):
 
     
     title = url + '.txt'
-    #f = open('hello.txt', 'w')
+    f = open('hello.txt', 'w')
 
     
     #f.write(article.encode('utf-8'))
