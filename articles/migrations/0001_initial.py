@@ -18,10 +18,16 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('article_title', models.CharField(max_length=300)),
-                ('article_author', models.CharField(max_length=250)),
-                ('article_subtitle', models.CharField(max_length=1000)),
-                ('article_coverphoto', models.CharField(max_length=1000)),
-                ('article_url', models.CharField(max_length=300)),
+                #('article_author', models.CharField(max_length=250)),
+                #('article_subtitle', models.CharField(max_length=1000)),
+                #('article_coverphoto', models.CharField(max_length=1000)),
+                #('article_url', models.CharField(max_length=300)),
+
+		('article_summary', models.CharField(max_length=2000)),
+    		('article_photo', models.CharField(max_length=1000)),
+    		('article_photosrc', models.URLField(max_length=300, default="DEFAULT VALUE")),
+    		('article_url', models.URLField()),
+    		('article_site', models.CharField(max_length=50, default="")), #i.e NPR, Fox News, etc
             ],
         ),
     ]

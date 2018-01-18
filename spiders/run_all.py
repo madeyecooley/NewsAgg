@@ -25,14 +25,14 @@ spider8 = THALLSpider(domain='www.townhall.com')
 spider9 = BBCSpider(domain='www.bbc.com')
 
 crawler = CrawlerProcess()
-crawler.crawl(spider1)
+#crawler.crawl(spider1)  #USE THIS SOURCE???
 crawler.crawl(spider2)
 crawler.crawl(spider3)
 crawler.crawl(spider4)
 crawler.crawl(spider5)
 crawler.crawl(spider6)
 crawler.crawl(spider7)
-crawler.crawl(spider8)
+#crawler.crawl(spider8)  #USE THIS SOURCE??
 crawler.crawl(spider9)
 
 crawler.start()

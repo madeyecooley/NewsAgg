@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="{% static 'articles/css/main.css' %}" />
+  <script type="text/javascript" src="{% static 'articles/js/main.js' %}"></script>
+  <script type="text/javascript">
+    var my_data = {{ dictionary }};
+
+  </script>
+
+  <title>The Daily News</title>
+</head>
+
+<body>
+  <nav class="nav_bar">
+    <div class="home">
+      <h1>The Daily News</h1>
+    </div>
+  </nav>
+
+  <ul>
+    {% for key, value in dictionary.items %}
+      <li><a href="{{key}}">{{value}}</a></li>
+    {% endfor %}
+</ul>
+
+
+</body>
+
+</html>

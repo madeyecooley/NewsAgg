@@ -7,32 +7,73 @@ from scrapy.linkextractors import LinkExtractor
 class WPSpider(Spider):
     name = 'wp_spider'
     allowed_domains = ['www.washingtonpost.com']
-    start_urls = ['https://www.washingtonpost.com/?reload=true']
+    #start_urls = ['https://www.washingtonpost.com/?reload=true']
+    start_urls = ['https://www.washingtonpost.com/politics/?nid=top_nav_politics&utm_term=.0723bbdfdbfb']
+
+    #rules = (
+    #    Rule(LinkExtractor(allow="https://www.washingtonpost.com/?reload=true"), callback='parse'),
+    #)
 
     rules = (
-        Rule(LinkExtractor(allow="https://www.washingtonpost.com/?reload=true"), callback='parse'),
+        Rule(LinkExtractor(allow="https://www.washingtonpost.com/politics/?nid=top_nav_politics&utm_term=.0723bbdfdbfb"), callback='parse'),
     )
+
 
     def parse(self, response):
         items = []
-
-        for article in response.xpath('//*[@class="chain-content no-skin "]/div[not(preceding-sibling::wp-ad)]'):
+        for div in response.xpath('//*[@id="fF6Zmc2WChZaBq"]/div/div[1]/div[1]/div'):
             item = Article()
-            # x = article.xpath('wp-ad/text()').extract[0]
-            #
-            # if not x:
-            #     print "TRUE"
-
-            item["Title"] = article.xpath('div/div/div/div/div/a['
-                                          '@data-pb-field="web_headline"]/text()').extract()
-            item["URL"] = article.xpath('div/div/div/div/div/a['
-                                          '@data-pb-field="web_headline"]/@href').extract()
-            item["Summary"] = article.xpath('div/div/div/div[2]/div[@class="blurb normal '
-                                            'normal-style "]/text()').extract()
-            item["Photo"] = article.xpath('/div/div/div/div[1]/div/div[1]/a/img/@src').extract()
+            item["Title"] = div.xpath('div[1]/div[1]/h3/a/text()').extract()[0]
+            item["URL"] = div.xpath('div[1]/div[1]/h3/a/@href').extract()[0]
+            item["Summary"] = div.xpath('div[1]/div[2]/p/text()').extract()[0]
+            item["Photo"] = div.xpath('div[2]/a/img/@data-hi-res-src').extract()[0]
             item["Site"] = "The Washington Post"
 
             items.append(item)
-            print_item(item)
-# //*[@id="fXcWds1SFmwnuq"]/div/div/div/div[2]/div[2]
-# //*[@id="fXcWds1SFmwnuq"]/div/div/div/div[1]/div/div[1]/a/img
+            #print_item(item)
+
+            if item["Title"] != "":
+                title = item["Title"]
+                title = title.encode('utf-8').strip()
+            else:
+                title = ""
+
+            if item["Summary"] != "":
+                summary = item["Summary"]
+                summary = summary.encode('utf-8').strip()
+            else:
+                summary = ""
+
+            if item["Photo"] != "":
+                imgsrc = item["Photo"]
+                imgsrc = imgsrc.encode('utf-8').strip()
+            else:
+                imgsrc = ""
+
+            if item["URL"] != "":
+                url = item["URL"]
+                url = url.encode('utf-8').strip()
+            else:
+                url = ""
+
+            if item["Site"] != "":
+                site = item["Site"]
+            else:
+                site = ""
+
+            #add_to_db(title, summary, "",  url, site)
+
+            with open("db_data.txt", "a") as myfile:
+                myfile.write('\t')
+                myfile.write(title)
+                myfile.write('\t')
+                myfile.write(summary)
+                myfile.write('\t')
+                myfile.write(imgsrc)
+                myfile.write('\t')
+                myfile.write(url)
+                myfile.write('\t')
+                myfile.write(site)
+                myfile.write('\n')
+
+

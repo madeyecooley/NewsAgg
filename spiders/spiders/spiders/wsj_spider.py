@@ -25,4 +25,46 @@ class WSJSpider(Spider):
             item["Site"] = "The Wall Street Journal"
 
             items.append(item)
-            print_item(item)
+            #print_item(item)
+
+            if item["Title"] != "":
+                title = item["Title"]
+                title = title.encode('utf-8').strip()
+            else:
+                title = ""
+
+            if item["Summary"] != "":
+                summary = item["Summary"]
+                summary = summary.encode('utf-8').strip()
+            else:
+                summary = ""
+
+            if item["Photo"] != "":
+                imgsrc = item["Photo"]
+                imgsrc = imgsrc.encode('utf-8').strip()
+            else:
+                imgsrc = ""
+
+            if item["URL"] != "":
+                url = item["URL"]
+                url = url.encode('utf-8').strip()
+            else:
+                url = ""
+
+            if item["Site"] != "":
+                site = item["Site"]
+            else:
+                site = ""
+
+            with open("db_data.txt", "a") as myfile:
+                myfile.write('\t')
+                myfile.write(title)
+                myfile.write('\t')
+                myfile.write(summary)
+                myfile.write('\t')
+                myfile.write(imgsrc)
+                myfile.write('\t')
+                myfile.write(url)
+                myfile.write('\t')
+                myfile.write(site)
+                myfile.write('\n')

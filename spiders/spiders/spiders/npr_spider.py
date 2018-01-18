@@ -3,7 +3,7 @@ from ..items import Article
 from .misc_functions import print_item
 from .get_article import get_article
 from scrapy.linkextractors import LinkExtractor
-
+#from .populate_db import add_to_db
 
 class NPRSpider(Spider):
     name = 'npr_spider'
@@ -22,13 +22,58 @@ class NPRSpider(Spider):
             item["Title"] = article.xpath('div/h2[@class="title"]/a/text()').extract()[0]
             item["URL"] = article.xpath('div/h2[@class="title"]/a/@href').extract()[0]
             item["Summary"] = article.xpath('div/p[@class="teaser"]/a/text()').extract()[0]
-            item["Photo"] = article.xpath('div/div/a/img/@src').extract()
-            item["Credit_Caption"] = article.xpath('div/div[@class="credit-caption"]/span/text('
-                                                   ')').extract()
+            if article.xpath('@class').extract()[0] != "item no-image":
+            	item["Photo"] = article.xpath('div/div/a/img/@src').extract()[0]
+            else:
+                item["Photo"] = ""
             item["Site"] = "NPR"
 
             items.append(item)
-            
-            get_article(item["URL"])
-		    
             #print_item(item)
+            
+            #get_article(item["URL"])
+	
+            if item["Title"] != "":
+                title = item["Title"]
+                title = title.encode('utf-8').strip()
+            else:
+                title = ""
+
+            if item["Summary"] != "":
+                summary = item["Summary"]
+                summary = summary.encode('utf-8').strip()
+            else:
+                summary = ""
+
+            if item["Photo"] != "":
+                imgsrc = item["Photo"]
+                imgsrc = imgsrc.encode('utf-8').strip()
+            else:
+                imgsrc = ""
+
+            if item["URL"] != "":
+                url = item["URL"]
+                url = url.encode('utf-8').strip()
+            else:
+                url = ""
+
+            if item["Site"] != "":
+                site = item["Site"]
+            else:
+                site = ""
+
+            #add_to_db(title, summary, "",  url, site)
+
+            with open("db_data.txt", "a") as myfile:
+                myfile.write('\t')
+                myfile.write(title)
+                myfile.write('\t')
+                myfile.write(summary)
+                myfile.write('\t')
+                myfile.write(imgsrc)
+                myfile.write('\t')
+                myfile.write(url)
+                myfile.write('\t')
+                myfile.write(site)
+                myfile.write('\n')
+ 
