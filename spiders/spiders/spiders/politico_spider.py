@@ -62,4 +62,4 @@ class PoliticoSpider(Spider):
                 myfile.write(site)
                 myfile.write('\n')
 
-
+            myfile.close()

@@ -68,3 +68,5 @@ class WSJSpider(Spider):
                 myfile.write('\t')
                 myfile.write(site)
                 myfile.write('\n')
+
+            myfile.close()

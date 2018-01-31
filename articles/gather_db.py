@@ -13,20 +13,18 @@ def get_data():
 
     cursor = mariadb_connection.cursor()
 
-    cursor.execute("SELECT article_site, article_title FROM articles_article")
+    cursor.execute("SELECT article_site, article_title, article_url, article_summary, article_photosrc FROM articles_article")
 
     data = cursor.fetchall()
     np.random.shuffle(data)
+    encoding = "utf-8"
 
+    converted = {}
     for row in data:
-        converted = {
-            "title" : row[1],
-            "site" : row[0]
-        }
-       
-    #print json.dumps(data)
+        info = [row[0].encode(encoding), row[2].encode(encoding), row[3].encode(encoding), row[4].encode(encoding)]
+        converted[row[1]] = [info]
 
-    print converted
+    #print converted
     return converted
 
     cursor.close()

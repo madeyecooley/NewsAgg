@@ -1,13 +1,15 @@
+#delete_db.py
+
 #This script deletes everything in the database. 
-#DONT SHARE
 
 import mysql.connector as mariadb
+from connectdb import connect
 
-mariadb_connection = mariadb.connect(user='madi', password='yourpassword', 
-	database='newsaggdb')
+def deletedb():
+    mariadb_connection = connect()
 
-cursor = mariadb_connection.cursor()
+    cursor = mariadb_connection.cursor()
 
-cursor.execute("TRUNCATE TABLE articles_article")
+    cursor.execute("TRUNCATE TABLE articles_article")
 
-mariadb_connection.close()
+    mariadb_connection.close()

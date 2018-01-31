@@ -21,6 +21,7 @@ class WPSpider(Spider):
 
     def parse(self, response):
         items = []
+        artnum = 0  #this counts the number of articles
         for div in response.xpath('//*[@id="fF6Zmc2WChZaBq"]/div/div[1]/div[1]/div'):
             item = Article()
             item["Title"] = div.xpath('div[1]/div[1]/h3/a/text()').extract()[0]
@@ -63,17 +64,36 @@ class WPSpider(Spider):
 
             #add_to_db(title, summary, "",  url, site)
 
-            with open("db_data.txt", "a") as myfile:
-                myfile.write('\t')
-                myfile.write(title)
-                myfile.write('\t')
-                myfile.write(summary)
-                myfile.write('\t')
-                myfile.write(imgsrc)
-                myfile.write('\t')
-                myfile.write(url)
-                myfile.write('\t')
-                myfile.write(site)
-                myfile.write('\n')
+            # 'w+' overwrites contents of the file since this spider is
+            # the first spider that is ran
+            if artnum == 0:
+                with open("db_data.txt", "w+") as myfile:
+                    myfile.write('\t')
+                    myfile.write(title)
+                    myfile.write('\t')
+                    myfile.write(summary)
+                    myfile.write('\t')
+                    myfile.write(imgsrc)
+                    myfile.write('\t')
+                    myfile.write(url)
+                    myfile.write('\t')
+                    myfile.write(site)
+                    myfile.write('\n')
+            else:
+                with open("db_data.txt", "a") as myfile:
+                    myfile.write('\t')
+                    myfile.write(title)
+                    myfile.write('\t')
+                    myfile.write(summary)
+                    myfile.write('\t')
+                    myfile.write(imgsrc)
+                    myfile.write('\t')
+                    myfile.write(url)
+                    myfile.write('\t')
+                    myfile.write(site)
+                    myfile.write('\n')
 
 
+            artnum += 1
+
+            myfile.close

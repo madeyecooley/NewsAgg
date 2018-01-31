@@ -77,3 +77,4 @@ class NPRSpider(Spider):
                 myfile.write(site)
                 myfile.write('\n')
  
+            myfile.close()

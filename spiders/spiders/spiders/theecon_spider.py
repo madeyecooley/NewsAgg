@@ -29,7 +29,7 @@ class ECONSpider(Spider):
                 item["Site"] = "The Economist"
 
                 items.append(item)
-                print_item(item)
+                #print_item(item)
             if item["Title"] != "":
                 title = item["Title"]
                 title = title.encode('utf-8').strip()
@@ -72,3 +72,4 @@ class ECONSpider(Spider):
                 myfile.write(site)
                 myfile.write('\n')
 
+            myfile.close()

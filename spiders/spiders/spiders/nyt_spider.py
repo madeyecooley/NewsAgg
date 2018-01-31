@@ -73,7 +73,7 @@ class NYTSpider(Spider):
 
 
 
-
+            myfile.close()
 
 
 
