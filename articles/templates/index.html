@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'articles/css/main.css' %}" /> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'articles/css/main.css' %}" />
+  <script type="text/javascript" src="{% static 'articles/js/main.js' %}"></script>
+  <title>The Daily News</title>
+</head>
+
+<body>
+  <nav class="nav_bar">
+    <div class="home">
+      <h1 class="pagetitle">The Daily News</h1>
+    </div>
+  </nav>
+
+  <a class="back-to-top" style="display: inline;" href="#">Back to Top</a>
+
+  <div class="wrapper">
+    {% for key, value in dictionary.items %}
+
+     <div class ="tabs">
+        <ul class="tab-links">
+          <li class="active"><a href="#tab1">Tab #1</a></li>
+          <li><a href="#tab2">Tab #2</a></li>
+        </ul>
+
+      <div class="tab-content">
+        <a href="{{value.0.1}}" class="article_link" target="_blank">
+         <div class="blocks" id="tab active" tabindex="1">
+              <h3 class="article_site">{{value.0.0}}</h3>
+              <h2>{{key}}</h2>
+              <img src="{{value.0.3}}" class="article_image">
+              <p>{{value.0.2}}</p>
+         </div>
+         <div class="summary" id="tab" tabindex="2">
+            <p class="text">
+              {{value.0.4}}
+            </p>
+         </div>
+       </a>
+     </div>
+    </div>
+
+   {% endfor %}
+</div>
+</body>
+
+</html>

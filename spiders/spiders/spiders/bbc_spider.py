@@ -2,7 +2,7 @@ from scrapy.spiders import Rule, Spider
 from ..items import Article
 from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
-
+from .get_article import get_article
 
 class BBCSpider(Spider):
     name = 'bbc_spider'
@@ -27,7 +27,6 @@ class BBCSpider(Spider):
             item["Site"] = "BBC News"
 
             items.append(item)
-            #print_item(item)
 
             if item["Title"] != "":
                 title = item["Title"]
@@ -54,6 +53,9 @@ class BBCSpider(Spider):
 
             summary = ""
 
+            text = get_article(item["URL"]).encode('utf-8').strip()
+            text = text.replace('\n', ' ')
+
             with open("db_data.txt", "a") as myfile:
                 myfile.write('\t')
                 myfile.write(title)
@@ -65,6 +67,8 @@ class BBCSpider(Spider):
                 myfile.write(url)
                 myfile.write('\t')
                 myfile.write(site)
+                myfile.write('\t')
+                myfile.write(text)
                 myfile.write('\n')
 
             myfile.close()

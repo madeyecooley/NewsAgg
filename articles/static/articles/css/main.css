@@ -1,0 +1,132 @@
+/*Generic page styling */
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+
+  background-color: #C7C9CB;
+  font-family: "Lato", sans-serif;
+
+  width: 100%;
+  height: 100%;
+}
+
+.pagetitle {
+  color: #313133;
+}
+
+.home {
+  text-align:center;
+  padding-top: 3%;
+  font-size: 300%;
+  color: black;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-gap: 15px;
+  background-color: #C7C9CB;
+  padding: 3%;
+  position: relative;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.blocks {
+  background-color: #313133;
+  color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 100%;
+  text-decoration: none;
+  box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+}
+
+.article_link {
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.text {
+  color: black;
+}
+
+.article_image {
+  padding-top: 10%;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.article_site {
+  font-style: italic;
+}
+
+.back-to-top {
+  background: none;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 50px;
+  z-index: 100;
+  display: none;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  text-align: center;
+  border-radius: 3px 0 0 0;
+}
+
+*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+  display:block;
+  clear:both;
+  content:'';
+}
+.tab-links li {
+  margin:0px 5px;
+  float:left;
+  list-style:none;
+}
+.tab-links a {
+  padding:9px 15px;
+  display:inline-block;
+  border-radius:3px 3px 0px 0px;
+  background:#7FB5DA;
+  font-size:16px;
+  font-weight:600;
+  color:#4c4c4c;
+  transition:all linear 0.15s;
+}
+.tab-links a:hover {
+  background:#a7cce5;
+  text-decoration:none;
+}
+li.active a, li.active a:hover {
+  background:#fff;
+  color:#4c4c4c;
+}
+
+#tab {
+  display:none;
+}
+
+#tab.active {
+  display:block;
+}
+
+.tab-content {
+padding:15px;
+border-radius:3px;
+box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+background:#fff;
+}

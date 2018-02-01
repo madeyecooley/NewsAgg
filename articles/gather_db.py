@@ -13,7 +13,7 @@ def get_data():
 
     cursor = mariadb_connection.cursor()
 
-    cursor.execute("SELECT article_site, article_title, article_url, article_summary, article_photosrc FROM articles_article")
+    cursor.execute("SELECT article_site, article_title, article_url, article_summary, article_photosrc, article_text FROM articles_article")
 
     data = cursor.fetchall()
     np.random.shuffle(data)
@@ -21,7 +21,7 @@ def get_data():
 
     converted = {}
     for row in data:
-        info = [row[0].encode(encoding), row[2].encode(encoding), row[3].encode(encoding), row[4].encode(encoding)]
+        info = [row[0].encode(encoding), row[2].encode(encoding), row[3].encode(encoding), row[4].encode(encoding), row[5].encode(encoding)]
         converted[row[1]] = [info]
 
     #print converted

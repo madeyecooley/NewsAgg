@@ -2,7 +2,7 @@ from scrapy.spiders import Rule, Spider
 from ..items import Article
 from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
-#from .populate_db import add_to_db
+from .get_article import get_article
 
 class NYTSpider(Spider):
     name = 'nyt_spider'
@@ -24,8 +24,6 @@ class NYTSpider(Spider):
             item["Site"] = "New York Times"
 
             items.append(item)
-
-            #get_article(item["URL"])
 
             if item["Title"] != "":
                 title = item["Title"]
@@ -56,7 +54,9 @@ class NYTSpider(Spider):
             else:
                 site = ""
 
-            #add_to_db(title, summary, "",  url, site)
+
+            text = get_article(item["URL"]).encode('utf-8').strip()
+            text = text.replace('\n', ' ')
 
             with open("db_data.txt", "a") as myfile:
                 myfile.write('\t')
@@ -69,6 +69,8 @@ class NYTSpider(Spider):
                 myfile.write(url)
                 myfile.write('\t')
                 myfile.write(site)
+                myfile.write('\t')
+                myfile.write(text)
                 myfile.write('\n')
 
 

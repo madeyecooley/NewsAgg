@@ -2,7 +2,7 @@ from scrapy.spiders import Rule, Spider
 from ..items import Article
 from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
-
+from .get_article import get_article
 
 class WPSpider(Spider):
     name = 'wp_spider'
@@ -31,7 +31,6 @@ class WPSpider(Spider):
             item["Site"] = "The Washington Post"
 
             items.append(item)
-            #print_item(item)
 
             if item["Title"] != "":
                 title = item["Title"]
@@ -66,6 +65,10 @@ class WPSpider(Spider):
 
             # 'w+' overwrites contents of the file since this spider is
             # the first spider that is ran
+
+            text = get_article(item["URL"]).encode('utf-8').strip()
+            text = text.replace('\n', ' ') 
+
             if artnum == 0:
                 with open("db_data.txt", "w+") as myfile:
                     myfile.write('\t')
@@ -78,6 +81,8 @@ class WPSpider(Spider):
                     myfile.write(url)
                     myfile.write('\t')
                     myfile.write(site)
+                    myfile.write('\t')
+                    myfile.write(text)
                     myfile.write('\n')
             else:
                 with open("db_data.txt", "a") as myfile:
@@ -91,6 +96,8 @@ class WPSpider(Spider):
                     myfile.write(url)
                     myfile.write('\t')
                     myfile.write(site)
+                    myfile.write('\t')
+                    myfile.write(text)
                     myfile.write('\n')
 
 

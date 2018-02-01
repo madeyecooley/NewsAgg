@@ -2,7 +2,7 @@ from scrapy.spiders import Rule, Spider
 from ..items import Article
 from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
-
+from .get_article import get_article
 
 class WSJSpider(Spider):
     name = 'wsj_spider'
@@ -25,7 +25,6 @@ class WSJSpider(Spider):
             item["Site"] = "The Wall Street Journal"
 
             items.append(item)
-            #print_item(item)
 
             if item["Title"] != "":
                 title = item["Title"]
@@ -56,6 +55,9 @@ class WSJSpider(Spider):
             else:
                 site = ""
 
+            text = get_article(item["URL"]).encode('utf-8').strip()
+            text = text.replace('\n', ' ')
+
             with open("db_data.txt", "a") as myfile:
                 myfile.write('\t')
                 myfile.write(title)
@@ -67,6 +69,8 @@ class WSJSpider(Spider):
                 myfile.write(url)
                 myfile.write('\t')
                 myfile.write(site)
+                myfile.write('\t')
+                myfile.write(text)
                 myfile.write('\n')
 
             myfile.close()

@@ -3,7 +3,6 @@ from ..items import Article
 from .misc_functions import print_item
 from .get_article import get_article
 from scrapy.linkextractors import LinkExtractor
-#from .populate_db import add_to_db
 
 class NPRSpider(Spider):
     name = 'npr_spider'
@@ -29,9 +28,9 @@ class NPRSpider(Spider):
             item["Site"] = "NPR"
 
             items.append(item)
-            #print_item(item)
             
-            #get_article(item["URL"])
+            text = get_article(item["URL"]).encode('utf-8').strip()
+            text = text.replace('\n', ' ')
 	
             if item["Title"] != "":
                 title = item["Title"]
@@ -62,7 +61,6 @@ class NPRSpider(Spider):
             else:
                 site = ""
 
-            #add_to_db(title, summary, "",  url, site)
 
             with open("db_data.txt", "a") as myfile:
                 myfile.write('\t')
@@ -75,6 +73,8 @@ class NPRSpider(Spider):
                 myfile.write(url)
                 myfile.write('\t')
                 myfile.write(site)
+                myfile.write('\t')
+                myfile.write(text)
                 myfile.write('\n')
  
             myfile.close()

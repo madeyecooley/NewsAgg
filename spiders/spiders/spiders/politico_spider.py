@@ -2,7 +2,7 @@ from scrapy.spiders import Rule, Spider
 from ..items import Article
 from .misc_functions import print_item
 from scrapy.linkextractors import LinkExtractor
-
+from .get_article import get_article
 
 class PoliticoSpider(Spider):
     name = 'politico_spider'
@@ -24,7 +24,6 @@ class PoliticoSpider(Spider):
             item["Site"] = "Politico"
 
             items.append(item)
-            #print_item(item)
 
             if item["Title"] != "":
                 title = item["Title"]
@@ -49,6 +48,9 @@ class PoliticoSpider(Spider):
             else:
                 site = ""
 
+            text = get_article(item["URL"]).encode('utf-8').strip()
+            text = text.replace('\n', ' ')
+
             with open("db_data.txt", "a") as myfile:
                 myfile.write('\t')
                 myfile.write(title)
@@ -60,6 +62,8 @@ class PoliticoSpider(Spider):
                 myfile.write(url)
                 myfile.write('\t')
                 myfile.write(site)
+                myfile.write('\t')
+                myfile.write(text)
                 myfile.write('\n')
 
             myfile.close()

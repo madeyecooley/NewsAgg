@@ -10,6 +10,7 @@ def populatedb():
     mariadb_connection = connect()
 
     cursor = mariadb_connection.cursor()
+    #cursor.execute("LOAD DATA LOCAL INFILE 'db_data.txt' INTO TABLE articles_article FIELDS TERMINATED BY '|' LINES TERMINATED BY '%'")
     cursor.execute("LOAD DATA LOCAL INFILE 'db_data.txt' INTO TABLE articles_article")
 
     mariadb_connection.commit()

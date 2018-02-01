@@ -1,0 +1,26 @@
+/*Generic page styling */
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+
+  background-color: yellow;
+  font-family: "Lato", sans-serif;
+}
+
+.home {
+  text-align:right;
+  padding-top: 1%;
+  font-size: 500%;
+  color: #FCA205;
+}
+
+.blocks {
+  background-color: yellow;
+}
+
+h3 {
+  color: red;
+}
+
