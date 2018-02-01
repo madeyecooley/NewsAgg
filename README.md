@@ -44,3 +44,7 @@ About this application:
 
 - spiders are written in python
 
+
+
+For tabs in html
+http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery
